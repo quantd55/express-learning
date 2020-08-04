@@ -26,8 +26,9 @@ app.get('/users/search', (req, res) => {
 		return user.name.toLowerCase().indexOf(keyword.toLowerCase()) !== -1;
 	})
 	res.render('users/index',{
-		users: result
+		users: result,
+		q: keyword
 	})
 })
 
-app.listen(port, () => {console.log('asdsadas')});
+app.listen(port, () => {console.log('Running...')});
