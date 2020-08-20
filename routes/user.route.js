@@ -1,4 +1,5 @@
 const express = require("express");
+const validate = require("../validate/user.validate");
 
 const controller = require("../controllers/user.controller");
 
@@ -11,6 +12,6 @@ router.get("/create", controller.create);
 
 router.get("/:userId", controller.view);
 
-router.post("/create", controller.postCreate);
+router.post("/create", validate.postCreate, controller.postCreate);
 
 module.exports = router;
