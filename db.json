@@ -3,7 +3,9 @@
     {
       "id": "1",
       "phone": "3213213",
-      "name": "Quan"
+      "name": "Quan",
+      "email": "quan@gmail.com",
+      "password": "1234"
     },
     {
       "id": "2",
@@ -29,6 +31,11 @@
       "name": "ddfsa",
       "phone": "1323",
       "id": "mlt0An5an"
+    },
+    {
+      "name": "quan@gmail.com",
+      "phone": "1234",
+      "id": "O3y2XMDLH"
     }
   ]
 }
