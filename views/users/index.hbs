@@ -1,14 +1,28 @@
 <h1>Users</h1>
-<a href="/users/create">Create</a>
-<form action="/users/search" method="GET">
-    <input type="text" name="q" id="keyword">
-    <button type="submit">Search</button>
-</form>
-<ul>
-    {{#each users}}
-    <li>
-        <span>{{this.name}} &nbsp;</span>
-        <a href="/users/{{this.id}}">Detail</a>
-    </li>
-    {{/each}}
-</ul>
+<div class="d-flex">
+    <a class="btn btn-primary" href="/users/create">Create</a>
+    <form action="/users/search" method="GET" class="ml-auto">
+        <input type="text" name="q" id="keyword">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td scope="row">{{this.name}}</td>
+            <td>{{this.phone}}</td>
+            <td>
+                <a class="btn btn-light" href="/users/{{this.id}}">Detail</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
