@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const hbs = require("express-handlebars");
@@ -23,7 +24,7 @@ app.set("view engine", "hbs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(cookieParser("TestSignCookie"));
+app.use(cookieParser(process.env.SESSION_SECRET));
 
 app.get("/", (req, res) => {
   res.render("index", {
