@@ -10,6 +10,7 @@
     <thead>
         <tr>
             <th>Name</th>
+            <th>Avatar</th>
             <th>Phone</th>
             <th>Actions</th>
         </tr>
@@ -18,6 +19,7 @@
         {{#each users}}
         <tr>
             <td scope="row">{{this.name}}</td>
+            <td scope="row"><img src="..\\{{this.avatar}}" alt="" width="100px"></td>
             <td>{{this.phone}}</td>
             <td>
                 <a class="btn btn-light" href="/users/{{this.id}}">Detail</a>
