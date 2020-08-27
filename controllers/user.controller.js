@@ -8,8 +8,8 @@ module.exports.index = (req, res) => {
 };
 
 module.exports.search = (req, res) => {
-  var keyword = req.query.q;
-  var result = db
+  let keyword = req.query.q;
+  let result = db
     .get("users")
     .value()
     .filter((user) => {
@@ -27,8 +27,8 @@ module.exports.create = (req, res) => {
 };
 
 module.exports.view = (req, res) => {
-  var id = req.params.userId;
-  var user = db.get("users").find({ id: id }).value();
+  let id = req.params.userId;
+  let user = db.get("users").find({ id: id }).value();
   res.render("users/view", {
     user: user,
   });
