@@ -185,5 +185,13 @@
       "description": "nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi",
       "price": 84.14
     }
+  ],
+  "sessions": [
+    {
+      "id": "AanBL6jBK",
+      "cart": {
+        "4eb15d9f-046b-4b0f-8eb2-d95c0c70cb7a": 2
+      }
+    }
   ]
 }
